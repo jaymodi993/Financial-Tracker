@@ -13,13 +13,31 @@ A personal finance management web app to track income, expenses, savings, and in
 ### Sign Up
 ![Sign Up Page](screenshots/signup.jpg)
 
+### Dashboard (Overview)
+![Dashboard](screenshots/dashboard.jpg)
+
+### Accounts
+![Accounts](screenshots/accounts.jpg)
+
+### Transactions
+![Transactions](screenshots/transactions.jpg)
+
+### Savings Goals
+![Savings Goals](screenshots/savings.jpg)
+
+### Investments
+![Investments](screenshots/investments.jpg)
+
+### Analytics
+![Analytics](screenshots/analytics.jpg)
+
 ## Features
 
 - **Multiple Accounts** — Track multiple bank accounts and demat accounts in one place
 - **Income Tracking** — Monitor all income sources with detailed categorization
-- **Savings Goals** — Track savings and set financial goals
-- **Investment Tracking** — Monitor investments and portfolio performance
-- **Analytics** — Get insights with monthly and yearly financial reports
+- **Savings Goals** — Track savings and set financial goals with progress bars
+- **Investment Tracking** — Monitor stock, mutual fund, and ETF portfolio performance
+- **Analytics** — Get insights with monthly and yearly financial charts and reports
 - **Secure** — Enterprise-grade security for your financial data
 
 ## Pages
@@ -29,12 +47,19 @@ A personal finance management web app to track income, expenses, savings, and in
 | `/` | Landing page with hero, features, and CTA |
 | `/auth/login` | Login form |
 | `/auth/sign-up` | Sign-up form |
+| `/dashboard` | Overview with stats, charts, and recent transactions |
+| `/dashboard/accounts` | Bank and demat accounts with balances |
+| `/dashboard/transactions` | Full transaction history with search and filter |
+| `/dashboard/savings` | Savings goals with progress tracking |
+| `/dashboard/investments` | Portfolio holdings and performance chart |
+| `/dashboard/analytics` | Monthly income/expense/savings charts and breakdowns |
 
 ## Tech Stack
 
 - **Frontend:** React 19, Vite, TypeScript
 - **Styling:** Tailwind CSS with shadcn/ui design tokens
 - **Routing:** Wouter
+- **Charts:** Recharts
 - **Icons:** Lucide React
 - **Backend:** Express 5 (Node.js)
 - **Database:** PostgreSQL + Drizzle ORM
@@ -83,12 +108,20 @@ pnpm run build
 artifacts/
   finance-tracker/       # React + Vite frontend
     src/
+      layouts/
+        DashboardLayout.tsx  # Sidebar + header shell
       pages/
-        Landing.tsx      # Landing page
-        Login.tsx        # Login form
-        SignUp.tsx        # Sign-up form
-      App.tsx            # Router
-      index.css          # Tailwind + CSS variables (blue theme)
+        Landing.tsx          # Landing page
+        Login.tsx            # Login form
+        SignUp.tsx           # Sign-up form
+        Dashboard.tsx        # Overview stats & charts
+        Accounts.tsx         # Bank & demat accounts
+        Transactions.tsx     # Transaction history
+        Savings.tsx          # Savings goals
+        Investments.tsx      # Portfolio tracker
+        Analytics.tsx        # Charts & reports
+      App.tsx                # Router
+      index.css              # Tailwind + CSS variables (blue theme)
   api-server/            # Express API server
     src/
       routes/            # API route handlers
@@ -98,9 +131,15 @@ lib/
   api-client-react/      # Generated React Query hooks
   api-zod/               # Generated Zod validation schemas
 screenshots/
-  landing.jpg            # Landing page screenshot
-  login.jpg              # Login page screenshot
-  signup.jpg             # Sign-up page screenshot
+  landing.jpg
+  login.jpg
+  signup.jpg
+  dashboard.jpg
+  accounts.jpg
+  transactions.jpg
+  savings.jpg
+  investments.jpg
+  analytics.jpg
 ```
 
 ## Environment Variables

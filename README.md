@@ -2,6 +2,17 @@
 
 A personal finance management web app to track income, expenses, savings, and investments across multiple bank and demat accounts — with monthly and yearly analytics.
 
+## Screenshots
+
+### Landing Page
+![Landing Page](screenshots/landing.jpg)
+
+### Login
+![Login Page](screenshots/login.jpg)
+
+### Sign Up
+![Sign Up Page](screenshots/signup.jpg)
+
 ## Features
 
 - **Multiple Accounts** — Track multiple bank accounts and demat accounts in one place
@@ -86,6 +97,10 @@ lib/
   api-spec/              # OpenAPI spec (source of truth)
   api-client-react/      # Generated React Query hooks
   api-zod/               # Generated Zod validation schemas
+screenshots/
+  landing.jpg            # Landing page screenshot
+  login.jpg              # Login page screenshot
+  signup.jpg             # Sign-up page screenshot
 ```
 
 ## Environment Variables
